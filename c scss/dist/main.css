@@ -1,0 +1,599 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: white;
+  font-family: "Cormorant", serif;
+  font-size: 30px;
+  color: #201614;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+a:focus {
+  outline: none;
+  color: #201614;
+  font-weight: 800;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #201614;
+}
+
+h1 {
+  font-size: 45px;
+  font-weight: 600;
+  letter-spacing: 10px;
+  text-align: center;
+}
+
+input {
+  border: none;
+}
+
+.container-section {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+/*header*/
+.header {
+  padding: 20px 200px;
+}
+
+.header--nav {
+  width: 60%;
+}
+
+.header--logo {
+  margin-right: 100px;
+}
+
+.header--items {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header__ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__a {
+  color: #201614;
+  background-color: white;
+  border: 2px solid #201614;
+  padding: 10px 15px;
+  transition: 0.3s;
+  word-break: break-word;
+}
+
+.header-photo {
+  width: 400px;
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.burger {
+  display: none;
+  position: relative;
+  width: 49px;
+  height: 36px;
+}
+
+.burger__line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  width: 100%;
+  height: 2px;
+  background-color: #201614;
+}
+
+.burger__line:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 78%;
+}
+
+.burger__line:nth-child(3) {
+  width: 66%;
+  top: auto;
+  bottom: 0;
+}
+
+/*about*/
+.about {
+  padding: 50px 100px;
+  background: url("../images/marble.jpg"), rgba(211, 211, 211, 0.9) repeat;
+  background-size: cover, cover;
+  border-bottom: 2px solid #201614;
+  border-top: 2px solid #201614;
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about-container a {
+  color: #201614;
+  font-weight: 800;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #201614;
+}
+
+/*works*/
+.works {
+  padding: 50px 100px;
+  background: url(../images/h.png) 100% 10% no-repeat, url(../images/g.png) 100% 50% no-repeat;
+  background-size: 25%, 43%;
+}
+
+.works-img {
+  width: 300px;
+  height: 300px;
+  margin-right: 50px;
+}
+
+.works-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.works-container a {
+  color: #201614;
+  font-weight: 800;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #201614;
+}
+
+.works__p--splash {
+  width: 320px;
+}
+
+.works__a {
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+  width: 210px;
+}
+
+/*works-pic*/
+.works-pic {
+  padding: 0 0 100px;
+}
+
+.works-pic-container {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  grid-template-columns: repeat(4, auto);
+}
+
+.works-pic__img {
+  width: 300px;
+  height: 300px;
+  margin-bottom: 50px;
+  filter: grayscale(100%) opacity(0.8);
+  transition: 0.3s;
+  justify-self: center;
+}
+.works-pic__img:nth-child(5) {
+  grid-area: 2/2/3/3;
+}
+.works-pic__img:nth-child(6) {
+  grid-area: 2/3/3/4;
+}
+
+.works__a {
+  word-break: break-word;
+}
+
+.works-pic__img:hover {
+  filter: grayscale(0%) opacity(1);
+  transform: scale(1.1);
+}
+
+/*contacts*/
+#contacts a {
+  color: #201614;
+  font-weight: 800;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #201614;
+}
+
+.js-validate-error-label {
+  position: relative;
+  bottom: 60px;
+}
+
+.contacts--heading {
+  background: url(../images/left-hand.png) no-repeat 0 20%, url(../images/right-hand.png) no-repeat 100% 20%, url(../images/loading.png) no-repeat 50% 25%, url(../images/marble.jpg) no-repeat;
+  background-size: 500px, 500px, 100px, auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.contacts--h1 {
+  margin-bottom: 250px;
+}
+
+.contacts--container-center {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form__input {
+  border-bottom: 2px solid #201614;
+  background-color: transparent;
+  margin-bottom: 60px;
+  padding: 20px 30px;
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+}
+
+.form__input:focus {
+  outline: none;
+  border: 2px solid #201614;
+}
+
+.btn {
+  color: #201614;
+  background-color: white;
+  border: 2px solid #201614;
+  padding: 10px 15px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.container {
+  width: 400px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.choices__list--dropdown {
+  width: 415px;
+}
+
+.choices__inner {
+  font-size: 30px;
+}
+
+.choices__item {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.choices__placeholder {
+  opacity: 1;
+}
+
+.choices__list--dropdown .choices__item--selectable {
+  font-size: 30px;
+  padding: 20px 0;
+}
+
+/*footer*/
+.footer {
+  padding: 50px 100px;
+  text-align: center;
+}
+
+/*popup*/
+.popup-container {
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(28, 33, 29, 0.92);
+  z-index: 100;
+}
+
+.popup {
+  position: relative;
+  width: 540px;
+  height: 435px;
+  padding: 20px;
+  background-size: cover;
+  background: url("../images/g.png") no-repeat center, url("../images/bg2.jpg") no-repeat;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.popup p {
+  font-size: 35px;
+  text-align: center;
+}
+
+.popup__btn-close {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: -60px;
+  top: -60px;
+  border: none;
+  background-color: transparent;
+}
+.popup__btn-close:before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: white;
+  transform: rotate(-45deg);
+  right: 4px;
+}
+.popup__btn-close:after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: white;
+  transform: rotate(45deg);
+  right: 4px;
+}
+
+@media (max-width: 1200px) and (min-width: 901px) {
+  .works-pic-container {
+    grid-template-columns: repeat(3, auto);
+  }
+}
+@media (max-width: 900px) {
+  .works-pic-container {
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(6, auto);
+  }
+
+  .works-pic__img:nth-child(5) {
+    grid-area: auto;
+  }
+  .works-pic__img:nth-child(6) {
+    grid-area: auto;
+  }
+}
+@media (max-width: 1500px) {
+  .header--logo {
+    margin-right: 0;
+  }
+
+  .header__ul {
+    flex-direction: column;
+    position: absolute;
+    right: 130px;
+    top: 100px;
+  }
+
+  .header__li {
+    margin-bottom: -30px;
+    transition: 0.3s;
+  }
+
+  .header__li--close {
+    margin-bottom: 20px;
+  }
+
+  .header--items {
+    justify-content: space-between;
+  }
+
+  .burger {
+    display: block;
+    transition-duration: 3s;
+    transition-property: background-color;
+  }
+
+  .burger:focus {
+    outline: none;
+  }
+
+  .burger:hover .burger__line {
+    transition-duration: 0.3s;
+    transition-property: background-color;
+    background-color: #a58a84;
+  }
+
+  .about-container {
+    flex-direction: column-reverse;
+  }
+
+  .works-container {
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  .works-container a {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .works__a {
+    margin: 0 auto;
+  }
+
+  .works-img {
+    margin-right: 0;
+  }
+
+  .contacts--heading {
+    background: url(../images/left-hand.png) no-repeat 0 20%, url(../images/right-hand.png) no-repeat 100% 20%, url(../images/loading.png) no-repeat 50% 20%, url(../images/marble.jpg) no-repeat;
+  }
+
+  .contacts--h1 {
+    margin-bottom: 160px;
+  }
+
+  .contacts--heading {
+    background-size: 250px, 250px, 50px, auto;
+  }
+}
+@media (max-width: 1500px) and (min-width: 769px) {
+  .header-photo {
+    width: 200px;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+
+  .about-container a {
+    padding-bottom: 0;
+  }
+
+  .header--logo {
+    width: 50px;
+    margin-right: 0;
+  }
+
+  .header-photo {
+    width: 200px;
+    margin: 0 auto;
+  }
+
+  .header {
+    padding: 20px 50px;
+  }
+
+  .header__ul {
+    right: 10px;
+    top: 70px;
+  }
+
+  .about {
+    padding: 30px 30px 0;
+  }
+  .about h1 {
+    text-align: left;
+  }
+
+  .about-container {
+    align-items: flex-start;
+  }
+
+  h1 {
+    font-size: 25px;
+    margin: 0 0 20px;
+  }
+
+  .works {
+    padding: 10px 30px;
+  }
+
+  .works-img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .works-pic-container {
+    width: 250px;
+    margin: 0 auto;
+  }
+
+  .works-pic__img {
+    width: 150px;
+    height: 150px;
+    filter: grayscale(0%) opacity(1);
+  }
+  .works-pic__img:focus {
+    transform: scale(1.1);
+  }
+  .works-pic__img:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .works-pic {
+    padding: 0;
+  }
+
+  .works__p--splash {
+    text-align: center;
+    width: 320px;
+  }
+
+  .contacts--heading {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .contacts--heading {
+    background: url(../images/left-hand.png) no-repeat 0 10%, url(../images/right-hand.png) no-repeat 100% 10%, url(../images/loading.png) no-repeat 50% 10%, url(../images/marble.jpg) no-repeat;
+  }
+
+  .contacts--heading {
+    background-size: 100px, 100px, 30px, auto;
+  }
+
+  .contacts--h1 {
+    margin-bottom: 80px;
+  }
+
+  .form__input {
+    margin-bottom: 30px;
+  }
+
+  .container {
+    width: 270px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+
+  .choices__list--dropdown {
+    width: 285px;
+  }
+
+  .choices__item--selectable {
+    width: 285px;
+  }
+
+  .choices__inner, .choices__list--dropdown .choices__item--selectable {
+    font-size: 16px;
+  }
+
+  .choices__list.choices__list--single {
+    width: 180px;
+  }
+
+  .js-validate-error-label {
+    bottom: 20px;
+  }
+
+  .footer {
+    padding: 20px 30px;
+  }
+
+  .popup {
+    width: 250px;
+    height: 200px;
+  }
+  .popup p {
+    font-size: 18px;
+  }
+
+  .popup__btn-close {
+    right: 0;
+  }
+}
