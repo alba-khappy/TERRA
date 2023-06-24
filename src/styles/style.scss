@@ -16,9 +16,18 @@ body {
     font-family: "Montserrat-Regular";
     font-style: normal;
     font-weight: 400;
-    src: local("Montserrat"),
+    src: local("Montserrat-Regular"),
          url("./fonts/Montserrat-Regular.woff2") format("woff2"),
          url("./fonts/Montserrat-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Montserrat-Medium";
+    font-style: normal;
+    font-weight: 500;
+    src: local("Montserrat-Medium"),
+         url("./fonts/Montserrat-ExtraBold.woff2") format("woff2"),
+         url("./fonts/Montserrat-ExtraBold.woff") format("woff");
 }
 
 @font-face {
@@ -28,15 +37,6 @@ body {
     src: local("Montserrat-Bold"),
          url("./fonts/Montserrat-Bold.woff2") format("woff2"),
          url("./fonts/Montserrat-Bold.woff") format("woff");
-}
-
-@font-face {
-    font-family: "Montserrat-ExtraBold";
-    font-style: normal;
-    font-weight: 800;
-    src: local("Montserrat-"),
-         url("./fonts/Montserrat-ExtraBold.woff2") format("woff2"),
-         url("./fonts/Montserrat-ExtraBold.woff") format("woff");
 }
 
 *,
@@ -231,7 +231,7 @@ input {
         margin: 0 0 2rem;
 
         div {
-            font-family: 'Montserrat-ExtraBold', sans-serif;
+            font-family: 'Montserrat-Bold', sans-serif;
             font-weight: 800;
             font-size: 4.5rem;
         }
@@ -242,6 +242,7 @@ input {
         align-items: center;
         justify-content: space-between;
         gap: 3rem;
+        font-family: 'Montserrat-Medium', sans-serif;
 
         li img {
             margin-bottom: 1.5rem;
@@ -311,6 +312,7 @@ input {
         font-size: 1.2rem;
         text-align: center;
         margin: 0 0 2rem;
+        font-family: 'Montserrat-Medium', sans-serif;
     }
 
     &__stages {
@@ -327,7 +329,7 @@ input {
     &__list {
         display: grid;
         grid-template-columns: repeat(2, 49%);
-        gap: 2%;
+        gap: 2rem;
 
         li {
             display: flex;
@@ -371,6 +373,7 @@ input {
         font-size: 1.2rem;
         text-align: center;
         margin: 0 0 2rem;
+        font-family: 'Montserrat-Medium', sans-serif;
     }
 
     &__list {
@@ -391,6 +394,10 @@ input {
                 position: inherit;
                 z-index: 6;
                 margin: 0;
+
+                span {
+                    font-family: 'Montserrat-Medium', sans-serif;
+                }
             }
 
             &:first-child {
@@ -675,7 +682,7 @@ input {
         grid-template-columns: 1fr;
     }
 
-    .process__stages--2 {
+    .process__stages--heading {
         grid-area: 4/1/5/2;
     }
 

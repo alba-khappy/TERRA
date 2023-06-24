@@ -16,19 +16,19 @@ body {
   font-family: "Montserrat-Regular";
   font-style: normal;
   font-weight: 400;
-  src: local("Montserrat"), url("./fonts/Montserrat-Regular.woff2") format("woff2"), url("./fonts/Montserrat-Regular.woff") format("woff");
+  src: local("Montserrat-Regular"), url("./fonts/Montserrat-Regular.woff2") format("woff2"), url("./fonts/Montserrat-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Montserrat-Medium";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Montserrat-Medium"), url("./fonts/Montserrat-ExtraBold.woff2") format("woff2"), url("./fonts/Montserrat-ExtraBold.woff") format("woff");
 }
 @font-face {
   font-family: "Montserrat-Bold";
   font-style: normal;
   font-weight: 700;
   src: local("Montserrat-Bold"), url("./fonts/Montserrat-Bold.woff2") format("woff2"), url("./fonts/Montserrat-Bold.woff") format("woff");
-}
-@font-face {
-  font-family: "Montserrat-ExtraBold";
-  font-style: normal;
-  font-weight: 800;
-  src: local("Montserrat-"), url("./fonts/Montserrat-ExtraBold.woff2") format("woff2"), url("./fonts/Montserrat-ExtraBold.woff") format("woff");
 }
 *,
 *::before,
@@ -203,7 +203,7 @@ input {
   margin: 0 0 2rem;
 }
 .main-banner__heading div {
-  font-family: "Montserrat-ExtraBold", sans-serif;
+  font-family: "Montserrat-Bold", sans-serif;
   font-weight: 800;
   font-size: 4.5rem;
 }
@@ -212,6 +212,7 @@ input {
   align-items: center;
   justify-content: space-between;
   gap: 3rem;
+  font-family: "Montserrat-Medium", sans-serif;
 }
 .main-banner__list li img {
   margin-bottom: 1.5rem;
@@ -265,6 +266,7 @@ input {
   font-size: 1.2rem;
   text-align: center;
   margin: 0 0 2rem;
+  font-family: "Montserrat-Medium", sans-serif;
 }
 .process__stages {
   flex-direction: column;
@@ -278,7 +280,7 @@ input {
 .process__list {
   display: grid;
   grid-template-columns: repeat(2, 49%);
-  gap: 2%;
+  gap: 2rem;
 }
 .process__list li {
   display: flex;
@@ -314,6 +316,7 @@ input {
   font-size: 1.2rem;
   text-align: center;
   margin: 0 0 2rem;
+  font-family: "Montserrat-Medium", sans-serif;
 }
 .types__list {
   display: flex;
@@ -333,6 +336,9 @@ input {
   position: inherit;
   z-index: 6;
   margin: 0;
+}
+.types__list li p span {
+  font-family: "Montserrat-Medium", sans-serif;
 }
 .types__list li:first-child {
   background: url(./images/types-1.png) center/cover no-repeat, linear-gradient(180deg, rgba(0, 0, 0, 0.49), rgba(0, 0, 0, 0.49));
@@ -590,7 +596,7 @@ input {
     grid-template-columns: 1fr;
   }
 
-  .process__stages--2 {
+  .process__stages--heading {
     grid-area: 4/1/5/2;
   }
 
